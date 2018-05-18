@@ -1,5 +1,3 @@
-# csdnRemoveAd
-csdn极致去广告
 # CSDN极致去广告
 ## 版权声明
 - 感谢@nmgwap的原版csdn去广告(https://greasyfork.org/zh-CN/scripts/42466-csdn%E5%8E%BB%E5%B9%BF%E5%91%8A)
