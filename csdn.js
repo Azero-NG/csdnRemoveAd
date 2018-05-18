@@ -99,5 +99,6 @@
     //文章居中
     $("main").css("float","none");
     $("main").css("margin","auto");
-
+    //右下角关闭按钮
+    $(".box-box-default").hide();
 })();
