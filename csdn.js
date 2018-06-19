@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.03
+// @version      1.04
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        *://blog.csdn.net
@@ -42,6 +42,35 @@
             }
         });
         $($("aside div").first()).remove();
+				// 右下角弹窗
+		    $("#layerd").remove();
+		    $("#reportContent").remove();
+		    $(".tool-box").remove();
+		    $("#asideNewComments,.recommend-box,.edu-promotion,.comment-box,aside").remove();
+		    //底部空白
+		    $("main").css("margin-bottom","0px");
+		    //阅读全文
+		    //$('#article_content').css("height","");
+		    //$("div.readall_box,#btn-readmore,div.hide-article-box.text-center.csdn-tracking-statistics.tracking-click").remove();
+		    //顶部csdn
+		    $("div.csdn-toolbar.csdn-toolbar.tb_disnone").remove();
+		    //底部版权声明
+		    $(".article-copyright").remove();
+		    //上移按钮
+		    $(".meau-gotop-box").remove();
+		    //文章居中
+		    $("main").css("float","none");
+		    $("main").css("margin","auto");
+		    //右下角关闭按钮
+		    $(".box-box-default").remove();
+		    //上部广告
+		    $(".advert-bg").remove();
+		    $(".advert-cur").remove();
+				$('newsfeed').remove();
+				window.addEventListener ("load", removeIframe, false);
+		    function removeIframe () {
+		        $('iframe').remove();
+		    }
     }
     // 正则匹配搜索页面
     var socsdn = /so.csdn.net/i;
@@ -80,28 +109,5 @@
             }
         });
     }
-    // 右下角弹窗
-    $("#layerd").remove();
-    $("#reportContent").remove();
-    $(".tool-box").remove();
-    $("#asideNewComments,.recommend-box,.edu-promotion,.comment-box,aside").remove();
-    //底部空白
-    $("main").css("margin-bottom","0px");
-    //阅读全文
-    //$('#article_content').css("height","");
-    //$("div.readall_box,#btn-readmore,div.hide-article-box.text-center.csdn-tracking-statistics.tracking-click").remove();
-    //顶部csdn
-    $("div.csdn-toolbar.csdn-toolbar.tb_disnone").remove();
-    //底部版权声明
-    $(".article-copyright").remove();
-    //上移按钮
-    $(".meau-gotop-box").remove();
-    //文章居中
-    $("main").css("float","none");
-    $("main").css("margin","auto");
-    //右下角关闭按钮
-    $(".box-box-default").remove();
-    //上部广告
-    $(".advert-bg").remove();
-    $(".advert-cur").remove();
+
 })();
