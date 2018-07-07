@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.04
+// @version      1.05
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        *://blog.csdn.net
@@ -70,7 +70,8 @@
 				window.addEventListener ("load", removeIframe, false);
 		    function removeIframe () {
 		        $('iframe').remove();
-		    }
+            }
+            $(".blog-content-box ~ div").remove();//todo:streamline my code
     }
     // 正则匹配搜索页面
     var socsdn = /so.csdn.net/i;

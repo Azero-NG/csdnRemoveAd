@@ -2,6 +2,8 @@
 ## 效果一览
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 ## 更新历史
+### 1.05
+- 删除下部div 广告
 ### 1.04
 - 删除底部iframe广告(添加load listener)
 - 删除newsfeed
