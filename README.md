@@ -6,6 +6,8 @@
 ## 效果一览
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 ## 更新历史
+### 1.06
+- 配合abp解决"CSDN检测当前广告样式的广告位需要满足宽和高均大于等于40"问题
 ### 1.05
 - 删除下部div 广告
 ### 1.04
