@@ -1,4 +1,8 @@
 # CSDN极致去广告
+## 重要
+- 本脚本需要配合abp类插件
+- 请在此类软件中加入自定义规则，以解决csdn反去广告问题，否则会提示"CSDN检测当前广告样式的广告位需要满足宽和高均大于等于40"
+- https://static.mediav.com/js/mvf_news_feed.js
 ## 效果一览
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 ## 更新历史
