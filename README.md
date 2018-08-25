@@ -2,6 +2,7 @@
 ## 重要
 - 本脚本需要配合abp类插件
 - 请在此类软件中加入过滤列表，以解决csdn反去广告问题，否则会提示"CSDN检测当前广告样式的广告位需要满足宽和高均大于等于40"
+- 添加教程:https://github.com/Azero-NG/csdnRemoveAd/blob/master/abp%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E6%BB%A4%E5%99%A8.md
 - 列表地址:https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/csdnadfilters.txt
 
 ## 效果一览
