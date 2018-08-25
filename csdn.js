@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.07
+// @version      1.08
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        *://blog.csdn.net
@@ -12,11 +12,25 @@
 // @match        *://www.csdn.net/*
 // @match        *://download.csdn.net
 // @match        *://download.csdn.net/*
-// @grant        none
+// @grant        GM_setValue
+// @grant        GM_getValue
 // ==/UserScript==
 
 (function () {
     'use strict';
+    //更新提示
+    if (GM_getValue("csdnNoti",true)==true)
+        if(!confirm("CSDN极致去广告脚本已更新\n为解决csdn反广告问题\n请查看项目主页获取解决办法\n是否再次提示(取消即不再提示,确认将打开项目主页)"))
+            GM_setValue("csdnNoti",false);
+        else
+        {
+            var form = document.createElement('form');
+            form.action = 'https://github.com/Azero-NG/csdnRemoveAd';
+            form.target = '_blank';
+            form.method = 'GET';
+            document.body.appendChild(form);
+            form.submit();
+        }
     //阅读全文
     $('#btn-readmore').click();
     // 获取当前地址url
