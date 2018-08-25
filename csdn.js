@@ -74,16 +74,11 @@
                 $('iframe').remove();
                 //更新提示
                 if (GM_getValue("csdnNotifi",true)==true)
-                if(!confirm("CSDN极致去广告脚本已更新\n为解决csdn反广告问题\n请查看项目主页获取解决办法\n是否再次提示(取消即不再提示,确认将打开项目主页)"))
+                if(!confirm("CSDN极致去广告脚本已更新\n为解决csdn反广告问题\n请查看项目主页获取解决办法\n是否再次提示(取消即不再提示,确认将打开项目主页，请允许弹窗)"))
                     GM_setValue("csdnNotifi",false);
                 else
                 {
-                    var form = document.createElement('form');
-                    form.action = 'https://github.com/Azero-NG/csdnRemoveAd';
-                    form.target = '_blank';
-                    form.method = 'GET';
-                    document.body.appendChild(form);
-                    form.submit();
+                    window.open('https://github.com/Azero-NG/csdnRemoveAd');
                 }
             }
             $(".blog-content-box ~ div").remove();//todo:streamline my code
