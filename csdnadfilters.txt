@@ -1,0 +1,6 @@
+[Adblock Plus 2.0]
+! Version: 1
+! Title: csdnadfilters
+! Expires: 1 days
+! Homepage: https://github.com/Azero-NG/csdnRemoveAd
+https://static.mediav.com/js/mvf_news_feed.js
