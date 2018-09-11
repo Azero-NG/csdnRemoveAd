@@ -9,6 +9,9 @@
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 
 ## 更新历史
+### 1.09
+- 移除右部推荐
+  
 ### 1.08
 - 添加更新提示
 

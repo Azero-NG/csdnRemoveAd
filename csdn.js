@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.08
+// @version      1.09
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        *://blog.csdn.net
@@ -68,8 +68,10 @@
 		    //上部广告
 		    $(".advert-bg").remove();
 		    $(".advert-cur").remove();
-				$('newsfeed').remove();
-				window.addEventListener ("load", removeIframe, false);
+            $('newsfeed').remove();
+            //右部推荐移除
+            $('.recommend-right').remove();
+			window.addEventListener ("load", removeIframe, false);
 		    function removeIframe () {
                 $('iframe').remove();
                 //更新提示
