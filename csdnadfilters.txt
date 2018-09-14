@@ -1,6 +1,11 @@
 [Adblock Plus 2.0]
-! Version: 107
+! Version: 108
 ! Title: csdnadfilters
 ! Expires: 1 days
 ! Homepage: https://github.com/Azero-NG/csdnRemoveAd
-https://static.mediav.com/js/mvf_news_feed.js
+||mediav.com^$third-party
+||dup.baidustatic.com^
+||rabc1.iteye.com^
+csdn.net##.csdn-tracking-statistics[style="height:250px;"]
+###adContent
+||g.$third-party,subdocument,script

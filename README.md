@@ -9,6 +9,9 @@
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 
 ## 更新历史
+### abp规则108
+- 参考EasyList China+EasyList，乘风广告过滤规则，去除某些脚本,有空会好好学习abp规则
+
 ### 1.09
 - 移除右部推荐
   
