@@ -1,126 +1,55 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.09
+// @version      1.10
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
-// @match        *://blog.csdn.net
-// @match        *://blog.csdn.net/*
-// @match        *://bbs.csdn.net/*
-// @match        *://so.csdn.net/*
-// @match        *://www.csdn.net
-// @match        *://www.csdn.net/*
-// @match        *://download.csdn.net
-// @match        *://download.csdn.net/*
+// @match        http*://blog.csdn.net/*/article/details/*
 // @grant        GM_setValue
 // @grant        GM_getValue
 // ==/UserScript==
 
 (function () {
     'use strict';
+    if (GM_getValue("csdnNotifi",true)==true)
+    {
+        $('body')[0].addEventListener("click", function () {
+            if(!confirm("CSDN极致去广告脚本已更新\n为解决csdn反广告问题\n本脚本需要配合abp类插件并添加过滤列表\n请查看项目主页获取教程\n是否再次提示(取消即不再提示,确认将打开项目主页)"))
+            GM_setValue("csdnNotifi",false);
+        else
+            window.open('https://github.com/Azero-NG/csdnRemoveAd/blob/master/abp%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E6%BB%A4%E5%99%A8.md');
+        });
 
-    //阅读全文
-    $('#btn-readmore').click();
-    // 获取当前地址url
-    var url = location.href;
-    // 正则匹配博客部分
-    var blogcsdn = /blog.csdn.net/i;
-    if (blogcsdn.test(url)) {
-        // 页面主体部分轮播广告
-        $(".box-box-large").remove();
-        $("#asideProfile").next().remove();
-        $($("#asideFooter").find("div").first()).remove();
-        // 隐藏下面登录注册
-        $(".pulllog-box").remove();
-        // 首页头部广告
-        $(".banner-ad-box").remove();
-        // 去除列表自动加载的广告
-        $(".recommend-box").bind("DOMNodeInserted", function (e) {
-            for (var i = 0; i < $(".recommend-ad-box").length; i++) {
-                // 去除文章列表中间广告
-                if ($(".recommend-ad-box").attr("class") == "recommend-item-box recommend-ad-box") {
-                    $(".recommend-ad-box").remove();
-                }
-            }
-        });
-        $($("aside div").first()).remove();
-				// 右下角弹窗
-		    $("#layerd").remove();
-		    $("#reportContent").remove();
-		    $(".tool-box").remove();
-		    $("#asideNewComments,.recommend-box,.edu-promotion,.comment-box,aside").remove();
-		    //底部空白
-		    $("main").css("margin-bottom","0px");
-		    //阅读全文
-		    //$('#article_content').css("height","");
-		    //$("div.readall_box,#btn-readmore,div.hide-article-box.text-center.csdn-tracking-statistics.tracking-click").remove();
-		    //顶部csdn
-		    $("div.csdn-toolbar.csdn-toolbar.tb_disnone").remove();
-		    //底部版权声明
-		    $(".article-copyright").remove();
-		    //上移按钮
-		    $(".meau-gotop-box").remove();
-		    //文章居中
-		    $("main").css("float","none");
-		    $("main").css("margin","auto");
-		    //右下角关闭按钮
-		    $(".box-box-default").remove();
-		    //上部广告
-		    $(".advert-bg").remove();
-		    $(".advert-cur").remove();
-            $('newsfeed').remove();
-            //右部推荐移除
-            $('.recommend-right').remove();
-			window.addEventListener ("load", removeIframe, false);
-		    function removeIframe () {
-                $('iframe').remove();
-                //更新提示
-                if (GM_getValue("csdnNotifi",true)==true)
-                if(!confirm("CSDN极致去广告脚本已更新\n为解决csdn反广告问题\n请查看项目主页获取解决办法\n是否再次提示(取消即不再提示,确认将打开项目主页，请允许弹窗)"))
-                    GM_setValue("csdnNotifi",false);
-                else
-                {
-                    window.open('https://github.com/Azero-NG/csdnRemoveAd');
-                }
-            }
-            $(".blog-content-box ~ div").remove();//todo:streamline my code
     }
-    // 正则匹配搜索页面
-    var socsdn = /so.csdn.net/i;
-    if (socsdn.test(url)) {
-        $(".rightadv").remove();
-    }
-    // 正则匹配首页广告
-    var wwwcsdn = /www.csdn.net/i;
-    if (wwwcsdn.test(url)) {
-        console.log("有广告");
-        // 首页头部广告
-        $(".banner-ad-box").remove();
-        if ($(".right_top").attr("class") == "slide-outer right_top") {
-            $(".right_top").remove();
-        }
-        if ($(".right_extension").attr("class") == "right_extension slide-outer") {
-            $(".right_extension").remove();
-        }
-    }
-    // 正则匹配下载页面
-    var downloadcsdn = /download.csdn.net/i;
-    if (downloadcsdn.test(url)) {
-        $(".mod_personal").next().remove();
-        $(".top_ad_box").remove();
-        $(".ad").remove();
-        $(".right_plate_con").next().remove();
-        $($(".download_r").find(".dl_mar_b").first()).remove();
-        $($(".download_r").find(".dl_mar_b").last()).remove();
-         // 去除列表自动加载的广告
-         $(".album_detail_wrap").bind("DOMNodeInserted", function (e) {
-            for (var i = 0; i < $(".yd_a_d_dl").length; i++) {
-                // 去除文章列表中间广告
-                if ($(".yd_a_d_dl").attr("class") == "album_detail_list yd_a_d_dl") {
-                    $(".yd_a_d_dl").remove();
-                }
-            }
-        });
+    else
+    {
+        //阅读全文
+        $('#btn-readmore').click();
+        //移除左侧
+        $('aside').remove();
+        //下方广告
+        $('.pulllog-box').remove();
+        $('.p4course_target').remove();
+        //下部推荐
+        $('.recommend-box').remove();
+        $('.t0').remove();
+        //上方工具栏
+        $('#csdn-toolbar').remove();
+        //右侧菜单
+        $('.tool-box').remove();
+        //右侧推荐
+        $('.recommend-right').remove();
+        //vip免广告 按钮
+        $('.meau-gotop-box').remove();
+        //未登录提示
+        $('.unlogin-box').remove();
+        //去版权
+        $('.article-copyright').remove();
+        //评论自动展开
+        $('#btnMoreComment').click();
+        //居中
+        $("main").css("float","none");
+        $("main").css("margin","auto");
     }
 
 })();

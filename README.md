@@ -9,8 +9,9 @@
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 
 ## 更新历史
-### abp规则108
-- 参考EasyList China+EasyList，乘风广告过滤规则，去除某些脚本,有空会好好学习abp规则
+
+### 1.10
+- 重大更新,代码推倒重写,根据反馈,保留了评论,更新提示更加人性化
 
 ### 1.09
 - 移除右部推荐
@@ -41,3 +42,8 @@
 ### 1.01
 - 感谢@nmgwap的原版csdn去广告(https://greasyfork.org/zh-CN/scripts/42466-csdn%E5%8E%BB%E5%B9%BF%E5%91%8A)
 - 本版本在@nmgwap csdn去广告(5.02.1128)上做了些许更改,删除了除文章以外的所有..(你懂得)
+
+## abp规则更新
+
+### abp规则108
+- 参考EasyList China+EasyList，乘风广告过滤规则，去除某些脚本,有空会好好学习abp规则
