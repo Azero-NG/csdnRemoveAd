@@ -1,5 +1,5 @@
 [Adblock Plus 2.0]
-! Version: 110
+! Version: 111
 ! Title: csdnadfilters
 ! Expires: 1 days
 ! Homepage: https://github.com/Azero-NG/csdnRemoveAd
@@ -8,3 +8,4 @@
 ||rabc1.iteye.com^
 ||g.csdnimg.cn/*/check-adblock.css$stylesheet
 ||g.csdnimg.cn/*/fuckadblock.min.js$script
+||g.csdnimg.cn/*/check-adblock.js$script
