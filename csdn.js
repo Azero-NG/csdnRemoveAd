@@ -18,6 +18,7 @@
             GM_setValue("csdnNotifi",false);
         else
             window.open('https://github.com/Azero-NG/csdnRemoveAd/blob/master/abp%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E8%BF%87%E6%BB%A4%E5%99%A8.md');
+            GM_setValue("csdnNotifi",false);
         });
 
     }
