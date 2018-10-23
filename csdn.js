@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.10
+// @version      1.11
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        http*://blog.csdn.net/*/article/details/*
@@ -51,6 +51,8 @@
         //居中
         $("main").css("float","none");
         $("main").css("margin","auto");
+        //去除剪切板劫持
+        csdn.copyright.init("", "", ""); 
     }
 
 })();
