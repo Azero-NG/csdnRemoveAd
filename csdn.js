@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.11
+// @version      1.12
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        http*://blog.csdn.net/*/article/details/*
@@ -13,6 +13,7 @@
     'use strict';
     if (GM_getValue("csdnNotifi",true)==true)
     {
+        window.alert("请点击网页空白处");
         $('body')[0].addEventListener("click", function () {
             if(!confirm("CSDN极致去广告脚本已更新\n为解决csdn反广告问题\n本脚本需要配合abp类插件并添加过滤列表\n请查看项目主页获取教程\n是否再次提示(取消即不再提示,确认将打开项目主页)"))
             GM_setValue("csdnNotifi",false);

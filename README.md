@@ -9,6 +9,8 @@
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 
 ## 更新历史
+### 1.12
+- 优化更新交互
 
 ### 1.11
 - 借鉴@gorgiaxx 添加剪切板净化
