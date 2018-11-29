@@ -9,6 +9,10 @@
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 
 ## 更新历史
+### 1.14
+- 优化阅读全文
+
+
 ### 1.13
 - 删除右侧第四栏
 

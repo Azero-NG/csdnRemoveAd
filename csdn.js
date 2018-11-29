@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.13
+// @version      1.14
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        http*://blog.csdn.net/*/article/details/*
@@ -26,7 +26,8 @@
     else
     {
         //阅读全文
-        $('#btn-readmore').click();
+        $('#article_content').removeAttr("style");
+        $('.hide-article-box').remove();
         //移除左侧
         $('aside').remove();
         //下方广告
@@ -45,6 +46,8 @@
         $('.meau-gotop-box').remove();
         //未登录提示
         $('.unlogin-box').remove();
+        //评论上方广告
+        $('#dmp_ad_58').remove();
         //去版权
         $('.article-copyright').remove();
         //右侧第四栏
