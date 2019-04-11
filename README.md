@@ -9,6 +9,10 @@
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 
 ## 更新历史
+### 1.17
+- 修复bug
+
+
 ### 1.16
 - 伪装登录,解决代码块复制问题
 

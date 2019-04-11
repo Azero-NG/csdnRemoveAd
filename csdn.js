@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.16
+// @version      1.17
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        http*://blog.csdn.net/*/article/details/*
@@ -13,8 +13,11 @@
 (function () {
     'use strict';
     currentUserName = "azero";//伪装登录
+
+    //页面加载完成监听事件
+    document.addEventListener ("DOMContentLoaded", DOM_ContentReady);
     //加载完成后运行
-    function pageFullyLoaded () {
+    function DOM_ContentReady () {
         if (GM_getValue("csdnNotifi",true)==true)
         {
             window.alert("请点击网页空白处");
