@@ -9,6 +9,10 @@
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 
 ## 更新历史
+### 1.18
+- 继续修复bug
+
+
 ### 1.17
 - 修复bug
 
