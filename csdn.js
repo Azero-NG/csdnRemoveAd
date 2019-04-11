@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.18
+// @version      1.19
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        http*://blog.csdn.net/*/article/details/*
@@ -12,7 +12,43 @@
 
 (function () {
     'use strict';
-    var currentUserName = "azero";//伪装登录
+    //添加watch功能
+    if (!Object.prototype.watch) {
+        Object.defineProperty(Object.prototype, "watch", {
+              enumerable: false
+            , configurable: true
+            , writable: false
+            , value: function (prop, handler) {
+                var
+                  oldval = this[prop]
+                , newval = oldval
+                , getter = function () {
+                    return newval;
+                }
+                , setter = function (val) {
+                    oldval = newval;
+                    return newval = handler.call(this, prop, oldval, val);
+                }
+                ;
+    
+                if (delete this[prop]) { // can't watch constants
+                    Object.defineProperty(this, prop, {
+                          get: getter
+                        , set: setter
+                        , enumerable: true
+                        , configurable: true
+                    });
+                }
+            }
+        });
+    }
+    //变量值锁定
+    function staticValue(name,val) {
+        unsafeWindow.watch(name,function(id, old, cur) {
+            return val;
+    });
+    }
+    staticValue("currentUserName","azero");
 
     //页面加载完成监听事件
     document.addEventListener ("DOMContentLoaded", DOM_ContentReady);

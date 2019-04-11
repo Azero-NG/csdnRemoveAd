@@ -9,6 +9,10 @@
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 
 ## 更新历史
+### 1.19
+- 伪装登录,解决代码块复制问题深入解决,添加watch功能,监视currentusername,同时由于tampermonkey grant,导致进入sandbox,通过unsafewindow解决,同时疑问:Object变量可以跨沙箱?
+
+
 ### 1.18
 - 继续修复bug
 
