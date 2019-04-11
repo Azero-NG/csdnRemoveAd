@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.14
+// @version      1.15
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        http*://blog.csdn.net/*/article/details/*
@@ -53,6 +53,7 @@
         //右侧第四栏
         $('.fourth_column').remove();
         //评论自动展开
+        currentUserName = "azero";//伪装登录
         $('#btnMoreComment').click();
         //居中
         $("main").css("float","none");

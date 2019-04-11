@@ -9,6 +9,10 @@
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 
 ## 更新历史
+### 1.15
+- 伪装登录,不登录显示评论
+
+
 ### 1.14
 - 优化阅读全文
 
