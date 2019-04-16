@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         CSDN极致去广告
 // @namespace    http://tampermonkey.net/
-// @version      1.20
+// @version      1.21
 // @description  CSDN去广告（除了文章其他全去）
 // @author       Azero
 // @match        http*://blog.csdn.net/*/article/details/*
@@ -48,6 +48,7 @@
             return val;
     });
     }
+    unsafeWindow.currentUserName = "azero"
     staticValue("currentUserName","azero");
 
     //页面加载完成监听事件

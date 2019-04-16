@@ -9,6 +9,10 @@
 ![预览](https://raw.githubusercontent.com/Azero-NG/csdnRemoveAd/master/preview.png)
 
 ## 更新历史
+### 1.21
+- 锁定变量前,先添加变量
+
+
 ### 1.20
 - 修复评论不显示bug
 
